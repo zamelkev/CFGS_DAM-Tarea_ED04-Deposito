@@ -18,6 +18,40 @@ public class CCuenta {
         cuenta=cue;
         saldo=sal;
     }
+    
+    // Métodos GETTER y SETTER
+    
+    public String getNombre() {
+        return nombre;
+    }
+    
+    public void setNombre(String nombreIntroducido) {
+        nombre = nombreIntroducido;
+    }
+    
+    public String getCuenta() {
+        return cuenta;
+    }
+    
+    public void setCuenta(String cuentaIntroducida) {
+        cuenta = cuentaIntroducida;
+    }
+    
+    public double getSaldo() {
+        return saldo;
+    }
+    
+    public void setSaldo(double saldoIntroducido) {
+        saldo = saldoIntroducido;
+    }
+    
+    public double getTipoInteres() {
+        return tipoInterés;
+    }
+    
+    public void setTipoInteres(double tipoInteresIntroducido) {
+        tipoInterés = tipoInteresIntroducido;
+    }
 
     public double estado()
     {
