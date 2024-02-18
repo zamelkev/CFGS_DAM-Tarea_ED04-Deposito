@@ -10,7 +10,7 @@ public class Main {
     
     /**Se ejecuta una vez ha sido llamada la clase en cuestión y puede ser 
      * usada para ejecutar/lanzar las funciones deseadas en el inicio
-     * @return String
+     * @param args Modificadores opcionales
      **/
     public static void main(String[] args) {
         
@@ -40,7 +40,7 @@ public class Main {
     /**
      * Función/Método contenedora de la funcionalidad requerida para poder 
      * ingresar/retirar efectivo de la cuenta seleccionada
-     * @param cantidad
+     * @param cantidad Devuelve el valor de la variable 'cantidad'
      **/
     public void operativa_cuenta(float cantidad) {
         saldoActual = cuenta1.estado();

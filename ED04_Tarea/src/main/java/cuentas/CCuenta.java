@@ -38,16 +38,17 @@ public class CCuenta {
     
     /** 
      * Devuelve el valor de la variable/propiedad privada 'nombbre'
-     * @return nombre
+     * @return nombreEnBD
      **/
     public String getNombre() {
-        return nombre;
+        String nombreEnBD = nombre;
+        return nombreEnBD;
     }
     
     /** 
      * Inserta el valor aportado mediante el parámetro nombreIntroducido 
      * en la propiedad/variable de clase 'nombre' 
-     * @param nombreIntroducido 
+     * @param nombreIntroducido Inserta el nombre deseado/introducido
      **/
     public void setNombre(String nombreIntroducido) { 
         nombre = nombreIntroducido;
@@ -55,16 +56,16 @@ public class CCuenta {
     
     /** Función que nos devuelve una cadena de texto con la cuenta del 
      * usuario en cuestión
-     * @return cuenta
+     * @return cuentaEnBD
      **/
     public String getCuenta() {
-        
-        return cuenta;
+        String cuentaEnBD = cuenta;
+        return cuentaEnBD;
     }
     
     /** 
      * Inserta el parámetro introducido en la variable/propiedad 'cuenta'
-     * @param cuentaIntroducida
+     * @param cuentaIntroducida Inserta la cuenta del usuario seleccionado
      **/
     public void setCuenta(String cuentaIntroducida) {
         
@@ -73,15 +74,16 @@ public class CCuenta {
     
     /** 
      * Devuelve el valor de la variable/propiedad 'saldo'
-     * @return saldo
+     * @return saldoEnDB
      **/
     public double getSaldo() {
+        double saldoEnDB = saldo;
         return saldo;
     }
     
     /**
      * Inserta el valor pasado por parámetro en la variable/propiedad 'saldo'
-     * @param saldoIntroducido
+     * @param saldoIntroducido Inserta la cantidad/el saldo a ingresar/retirar
      **/
     public void setSaldo(double saldoIntroducido) {
         saldo = saldoIntroducido;
@@ -98,7 +100,7 @@ public class CCuenta {
     /**
      * Inserta el valor del parámetro introducido en el parámetro/variable 
      * 'tipoInterés'
-     * @param tipoInteresIntroducido
+     * @param tipoInteresIntroducido Inserta el valor del tipo de interés
      **/
     public void setTipoInteres(double tipoInteresIntroducido) {
         tipoInterés = tipoInteresIntroducido;
@@ -107,17 +109,20 @@ public class CCuenta {
     /**
      * Devuelve el estado de la cuenta en cuestión, resultando en este caso el saldo 
      * del que se dispone en esta
-     * @return saldo
+     * @return saldoEnDB
      **/
     public double estado()
     {
+        double saldoEnDB = saldo;
         return saldo;
     }
     
     /**
      * Fúnción/Método referente a y contenedor de la funcionalidad necesaria 
      * para poder ingresar efectivo en la cuenta en cuestión
-     * @param cantidad
+     * @param cantidad Inserta la cantidad introducida/deseada
+     * @exception Exception Se muestra el error "No se puede ingresar una cantidad negativa" 
+     * cuando se intenta ingresar un valor inferior a 0
      **/
     public void ingresar(double cantidad) throws Exception
     {
@@ -130,10 +135,9 @@ public class CCuenta {
      * Función/Método contenedor de la funcionalidad necesaria para poder 
      * retirar cierta cantidad pasada vía parámetro del saldo disponible en la 
      * cuenta en cuestión
-     * @param cantidad
-     * @exception Devuelve un mensaje de error en dos supuestos considerados y 
-     * específicos: cuando se introduce un valor negativo a retirar y cuando 
-     * no se dispone se suficiente efectivo el la cuenta en cuestión
+     * @param cantidad Inserta la cantidad introducida/deseada
+     * @exception Exception Muestra un error distinto en base a dos supuestos: valor 
+     * negativo y saldo insuficiente
      **/
     public void retirar(double cantidad) throws Exception
     {
